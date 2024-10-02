@@ -1,0 +1,186 @@
+
+-Goal-
+Given a text document that is potentially relevant to this activity, first identify all entities needed from the text in order to capture the information and ideas in the text.
+Next, report all relationships among the identified entities.
+
+-Steps-
+1. Identify all entities. For each identified entity, extract the following information:
+- entity_name: Name of the entity, capitalized
+- entity_type: Suggest several labels or categories for the entity. The categories should not be specific, but should be as general as possible.
+- entity_description: Comprehensive description of the entity's attributes and activities
+Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
+
+2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.
+For each pair of related entities, extract the following information:
+- source_entity: name of the source entity, as identified in step 1
+- target_entity: name of the target entity, as identified in step 1
+- relationship_description: explanation as to why you think the source entity and the target entity are related to each other
+- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity
+Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_strength>)
+
+3. Return output in The primary language of the provided text is "English." as a single list of all the entities and relationships identified in steps 1 and 2. Use **{record_delimiter}** as the list delimiter.
+
+4. If you have to translate into The primary language of the provided text is "English.", just translate the descriptions, nothing else!
+
+5. When finished, output {completion_delimiter}.
+
+-Examples-
+######################
+
+Example 1:
+
+text:
+ 1: Fire-resistance-rated wall areas above finished ceilings, whether or not accessible
+in the completed construction.
+a. Joints and interior angles shall have tape set in joint compound.
+b. Surfaces shall be free of excess joint compound.
+c. Tool marks and ridges are acceptable.
+d. Tape and fastener heads do not need to be covered with joint compound.
+D. Tape, fill, and sand exposed joints, edges, and corners to produce smooth surface ready to
+receive finishes.
+1. Feather coats of joint compound so that camber is maximum 1/32 inch.
+3.10
+FIELD QUALITY CONTROL
+A. See Section 01 40 00 - Quality Requirements, for additional requirements.
+B. Remove, repair and reinstall or restore in place damaged items prior to inspection for Substantial
+Completion.
+1. Remove all twisted and damaged or otherwise defective framing, replace with new framing.
+2. Replace board work that cannot be repaired to conceal defects.
+
+------------------------
+output:
+("entity"{tuple_delimiter}FIRE-RESISTANCE-RATED WALL AREAS{tuple_delimiter}CONSTRUCTION ELEMENT{tuple_delimiter}Wall areas that are rated for fire resistance, located above finished ceilings, whether accessible or not in the completed construction)
+{record_delimiter}
+("entity"{tuple_delimiter}JOINTS{tuple_delimiter}CONSTRUCTION ELEMENT{tuple_delimiter}The connections between two pieces of material, which in this context need to have tape set in joint compound)
+{record_delimiter}
+("entity"{tuple_delimiter}INTERIOR ANGLES{tuple_delimiter}CONSTRUCTION ELEMENT{tuple_delimiter}The angles formed inside the construction, which need to have tape set in joint compound)
+{record_delimiter}
+("entity"{tuple_delimiter}TAPE{tuple_delimiter}MATERIAL{tuple_delimiter}Material used to cover joints and interior angles, set in joint compound)
+{record_delimiter}
+("entity"{tuple_delimiter}JOINT COMPOUND{tuple_delimiter}MATERIAL{tuple_delimiter}A material used to cover tape, joints, and interior angles to create a smooth surface)
+{record_delimiter}
+("entity"{tuple_delimiter}TOOL MARKS{tuple_delimiter}CONSTRUCTION DEFECT{tuple_delimiter}Marks left by tools during the application of joint compound, which are acceptable in this context)
+{record_delimiter}
+("entity"{tuple_delimiter}RIDGES{tuple_delimiter}CONSTRUCTION DEFECT{tuple_delimiter}Raised lines or edges left by tools during the application of joint compound, which are acceptable in this context)
+{record_delimiter}
+("entity"{tuple_delimiter}FASTENER HEADS{tuple_delimiter}CONSTRUCTION ELEMENT{tuple_delimiter}The heads of fasteners used in construction, which do not need to be covered with joint compound in this context)
+{record_delimiter}
+("entity"{tuple_delimiter}EXPOSED JOINTS{tuple_delimiter}CONSTRUCTION ELEMENT{tuple_delimiter}Joints that are visible and need to be taped, filled, and sanded to produce a smooth surface)
+{record_delimiter}
+("entity"{tuple_delimiter}EDGES{tuple_delimiter}CONSTRUCTION ELEMENT{tuple_delimiter}The outer lines or borders of a surface that need to be taped, filled, and sanded to produce a smooth surface)
+{record_delimiter}
+("entity"{tuple_delimiter}CORNERS{tuple_delimiter}CONSTRUCTION ELEMENT{tuple_delimiter}The points where two edges meet, which need to be taped, filled, and sanded to produce a smooth surface)
+{record_delimiter}
+("entity"{tuple_delimiter}FEATHER COATS{tuple_delimiter}CONSTRUCTION TECHNIQUE{tuple_delimiter}A technique of applying joint compound in thin layers to ensure a smooth transition, with a maximum camber of 1/32 inch)
+{record_delimiter}
+("entity"{tuple_delimiter}FIELD QUALITY CONTROL{tuple_delimiter}PROCESS{tuple_delimiter}The process of ensuring that construction meets specified quality requirements, including removing, repairing, and reinstalling or restoring damaged items)
+{record_delimiter}
+("entity"{tuple_delimiter}SECTION 01 40 00 - QUALITY REQUIREMENTS{tuple_delimiter}DOCUMENT{tuple_delimiter}A section of the construction specifications that outlines additional quality requirements)
+{record_delimiter}
+("entity"{tuple_delimiter}SUBSTANTIAL COMPLETION{tuple_delimiter}MILESTONE{tuple_delimiter}A stage in the construction process when the project is sufficiently complete for the owner to use it for its intended purpose)
+{record_delimiter}
+("entity"{tuple_delimiter}TWISTED AND DAMAGED FRAMING{tuple_delimiter}CONSTRUCTION DEFECT{tuple_delimiter}Framing that is twisted, damaged, or otherwise defective and needs to be removed and replaced with new framing)
+{record_delimiter}
+("entity"{tuple_delimiter}BOARD WORK{tuple_delimiter}CONSTRUCTION ELEMENT{tuple_delimiter}The installation of boards in construction, which needs to be replaced if it cannot be repaired to conceal defects)
+{record_delimiter}
+("relationship"{tuple_delimiter}JOINTS{tuple_delimiter}TAPE{tuple_delimiter}Tape is used to cover joints in construction{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}INTERIOR ANGLES{tuple_delimiter}TAPE{tuple_delimiter}Tape is used to cover interior angles in construction{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}TAPE{tuple_delimiter}JOINT COMPOUND{tuple_delimiter}Tape is set in joint compound to cover joints and interior angles{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}EXPOSED JOINTS{tuple_delimiter}TAPE{tuple_delimiter}Exposed joints need to be taped to produce a smooth surface{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}EDGES{tuple_delimiter}TAPE{tuple_delimiter}Edges need to be taped to produce a smooth surface{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}CORNERS{tuple_delimiter}TAPE{tuple_delimiter}Corners need to be taped to produce a smooth surface{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}EXPOSED JOINTS{tuple_delimiter}JOINT COMPOUND{tuple_delimiter}Exposed joints need to be filled with joint compound to produce a smooth surface{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}EDGES{tuple_delimiter}JOINT COMPOUND{tuple_delimiter}Edges need to be filled with joint compound to produce a smooth surface{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}CORNERS{tuple_delimiter}JOINT COMPOUND{tuple_delimiter}Corners need to be filled with joint compound to produce a smooth surface{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}FEATHER COATS{tuple_delimiter}JOINT COMPOUND{tuple_delimiter}Feather coats of joint compound are applied to ensure a smooth transition{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}FIELD QUALITY CONTROL{tuple_delimiter}SECTION 01 40 00 - QUALITY REQUIREMENTS{tuple_delimiter}Field quality control includes additional requirements outlined in Section 01 40 00 - Quality Requirements{tuple_delimiter}6)
+{record_delimiter}
+("relationship"{tuple_delimiter}FIELD QUALITY CONTROL{tuple_delimiter}SUBSTANTIAL COMPLETION{tuple_delimiter}Field quality control is conducted prior to inspection for Substantial Completion{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}TWISTED AND DAMAGED FRAMING{tuple_delimiter}FIELD QUALITY CONTROL{tuple_delimiter}Twisted and damaged framing needs to be removed and replaced as part of field quality control{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}BOARD WORK{tuple_delimiter}FIELD QUALITY CONTROL{tuple_delimiter}Board work that cannot be repaired needs to be replaced as part of field quality control{tuple_delimiter}8)
+{completion_delimiter}
+#############################
+
+
+Example 2:
+
+text:
+ Framing Members to
+Receive Screw-Attached Gypsum Panel Products.
+e. ASTM C840 - Standard Specification for Application and Finishing of Gypsum Board.
+f. ASTM C1047 - Standard Specification for Accessories for Gypsum Wallboard and
+Gypsum Veneer Base.
+g. ASTM C1177/C1177M - Standard Specification for Glass Mat Gypsum Substrate for Use
+as Sheathing.
+h. ASTM C1280 - Standard Specification for Application of Exterior Gypsum Panel
+Products for Use as Sheathing.
+i.
+ASTM C1325 - Standard Specification for Fiber-Mat Reinforced Cementitious Backer
+Units.
+j.
+ASTM C1396/C1396M - Standard Specification for Gypsum Board.
+k. ASTM C1658/C1658M - Standard Specification for Glass Mat Gypsum Panels.
+I. ASTM D3273 - Standard Test Method for Resistance to Growth of Mold on the Surface
+of Interior Coatings in an Environmental Chamber.
+m
+------------------------
+output:
+("entity"{tuple_delimiter}FRAMING MEMBERS{tuple_delimiter}COMPONENT{tuple_delimiter}Structural elements designed to receive screw-attached gypsum panel products)
+{record_delimiter}
+("entity"{tuple_delimiter}GYPSUM PANEL PRODUCTS{tuple_delimiter}MATERIAL{tuple_delimiter}Products made from gypsum used in construction, typically for walls and ceilings)
+{record_delimiter}
+("entity"{tuple_delimiter}ASTM C840{tuple_delimiter}STANDARD{tuple_delimiter}Standard Specification for Application and Finishing of Gypsum Board)
+{record_delimiter}
+("entity"{tuple_delimiter}ASTM C1047{tuple_delimiter}STANDARD{tuple_delimiter}Standard Specification for Accessories for Gypsum Wallboard and Gypsum Veneer Base)
+{record_delimiter}
+("entity"{tuple_delimiter}ASTM C1177/C1177M{tuple_delimiter}STANDARD{tuple_delimiter}Standard Specification for Glass Mat Gypsum Substrate for Use as Sheathing)
+{record_delimiter}
+("entity"{tuple_delimiter}ASTM C1280{tuple_delimiter}STANDARD{tuple_delimiter}Standard Specification for Application of Exterior Gypsum Panel Products for Use as Sheathing)
+{record_delimiter}
+("entity"{tuple_delimiter}ASTM C1325{tuple_delimiter}STANDARD{tuple_delimiter}Standard Specification for Fiber-Mat Reinforced Cementitious Backer Units)
+{record_delimiter}
+("entity"{tuple_delimiter}ASTM C1396/C1396M{tuple_delimiter}STANDARD{tuple_delimiter}Standard Specification for Gypsum Board)
+{record_delimiter}
+("entity"{tuple_delimiter}ASTM C1658/C1658M{tuple_delimiter}STANDARD{tuple_delimiter}Standard Specification for Glass Mat Gypsum Panels)
+{record_delimiter}
+("entity"{tuple_delimiter}ASTM D3273{tuple_delimiter}STANDARD{tuple_delimiter}Standard Test Method for Resistance to Growth of Mold on the Surface of Interior Coatings in an Environmental Chamber)
+{record_delimiter}
+("relationship"{tuple_delimiter}FRAMING MEMBERS{tuple_delimiter}GYPSUM PANEL PRODUCTS{tuple_delimiter}Framing members are designed to receive screw-attached gypsum panel products{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}ASTM C840{tuple_delimiter}GYPSUM PANEL PRODUCTS{tuple_delimiter}ASTM C840 provides specifications for the application and finishing of gypsum board, a type of gypsum panel product{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}ASTM C1047{tuple_delimiter}GYPSUM PANEL PRODUCTS{tuple_delimiter}ASTM C1047 provides specifications for accessories used with gypsum wallboard and gypsum veneer base, which are types of gypsum panel products{tuple_delimiter}6)
+{record_delimiter}
+("relationship"{tuple_delimiter}ASTM C1177/C1177M{tuple_delimiter}GYPSUM PANEL PRODUCTS{tuple_delimiter}ASTM C1177/C1177M provides specifications for glass mat gypsum substrate used as sheathing, a type of gypsum panel product{tuple_delimiter}6)
+{record_delimiter}
+("relationship"{tuple_delimiter}ASTM C1280{tuple_delimiter}GYPSUM PANEL PRODUCTS{tuple_delimiter}ASTM C1280 provides specifications for the application of exterior gypsum panel products used as sheathing{tuple_delimiter}6)
+{record_delimiter}
+("relationship"{tuple_delimiter}ASTM C1325{tuple_delimiter}GYPSUM PANEL PRODUCTS{tuple_delimiter}ASTM C1325 provides specifications for fiber-mat reinforced cementitious backer units, which can be used with gypsum panel products{tuple_delimiter}5)
+{record_delimiter}
+("relationship"{tuple_delimiter}ASTM C1396/C1396M{tuple_delimiter}GYPSUM PANEL PRODUCTS{tuple_delimiter}ASTM C1396/C1396M provides specifications for gypsum board, a type of gypsum panel product{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}ASTM C1658/C1658M{tuple_delimiter}GYPSUM PANEL PRODUCTS{tuple_delimiter}ASTM C1658/C1658M provides specifications for glass mat gypsum panels, a type of gypsum panel product{tuple_delimiter}6)
+{record_delimiter}
+("relationship"{tuple_delimiter}ASTM D3273{tuple_delimiter}GYPSUM PANEL PRODUCTS{tuple_delimiter}ASTM D3273 provides a test method for resistance to mold growth on the surface of interior coatings, which can be applied to gypsum panel products{tuple_delimiter}5)
+{completion_delimiter}
+#############################
+
+
+
+-Real Data-
+######################
+text: {input_text}
+######################
+output:

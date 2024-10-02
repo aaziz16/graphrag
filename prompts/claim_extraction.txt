@@ -1,0 +1,65 @@
+Here’s a detailed version of the claim extraction prompt tailored to your construction specification document use case:
+
+---
+
+Target activity:
+You are an intelligent assistant that helps a human analyst to analyze claims regarding construction materials, products, manufacturers, or compliance standards presented in a construction specification document.
+
+-Goal-
+Given a construction specification document that is potentially relevant to this activity, an entity specification (such as materials, products, manufacturers, or standards), and a claim description, extract all entities that match the entity specification and all claims against those entities.
+
+-Steps-
+
+1. **Extract all named entities** that match the predefined entity specification. The entity specification can be a list of material/product names, manufacturers, or compliance standards (e.g., GYPSUM SHAFTLINER BOARD, ASTM C1396, CERTAINTEED CORPORATION).
+   
+2. **Extract all claims associated with each entity** identified in step 1. Claims must match the specified claim description, and the identified entity should be the subject of the claim.
+   For each claim, extract the following information:
+   - **Subject**: Name of the entity that is the subject of the claim, capitalized. The subject entity is one that committed the action or is responsible for the compliance described in the claim.
+   - **Object**: Name of the entity that is affected by or reports the action described in the claim, capitalized. If the object entity is unknown, use **NONE**.
+   - **Claim Type**: Overall category of the claim, capitalized. For example: COMPLIANCE VIOLATION, PRODUCT DEFICIENCY, NON-STANDARD PERFORMANCE.
+   - **Claim Status**: **TRUE**, **FALSE**, or **SUSPECTED**. TRUE means the claim is confirmed, FALSE means the claim is disproven, SUSPECTED means the claim is unverified.
+   - **Claim Description**: Detailed description explaining the reasoning behind the claim, supported by related evidence such as test results or compliance documents.
+   - **Claim Date**: Period (start_date, end_date) when the claim was made, in ISO-8601 format. If the claim was made on a single date, set both start_date and end_date to that date. If the date is unknown, use **NONE**.
+   - **Claim Source Text**: List of **all** quotes from the original document relevant to the claim.
+
+Format each claim as `(<subject_entity>{tuple_delimiter}<object_entity>{tuple_delimiter}<claim_type>{tuple_delimiter}<claim_status>{tuple_delimiter}<claim_start_date>{tuple_delimiter}<claim_end_date>{tuple_delimiter}<claim_description>{tuple_delimiter}<claim_source>)`.
+
+3. Return output in English as a single list of all the claims identified in steps 1 and 2. Use **{record_delimiter}** as the list delimiter.
+
+4. When finished, output {completion_delimiter}.
+
+---
+
+Examples:
+
+Example 1:
+
+Entity specification: CONSTRUCTION MATERIAL, COMPLIANCE STANDARD  
+Claim description: Compliance violations for materials not meeting industry standards  
+Text: The Gypsum Shaftliner Board produced by Manufacturer A was found to violate ASTM C1396 standards for fire resistance in multiple tests conducted in 2023.
+
+Output:
+```
+(GYPSUM SHAFTLINER BOARD{tuple_delimiter}ASTM C1396{tuple_delimiter}COMPLIANCE VIOLATION{tuple_delimiter}TRUE{tuple_delimiter}2023-01-01T00:00:00{tuple_delimiter}2023-12-31T00:00:00{tuple_delimiter}Gypsum Shaftliner Board violated ASTM C1396 standards for fire resistance in 2023{tuple_delimiter}The Gypsum Shaftliner Board produced by Manufacturer A was found to violate ASTM C1396 standards for fire resistance in multiple tests conducted in 2023.)
+{completion_delimiter}
+```
+
+Example 2:
+
+Entity specification: MANUFACTURER  
+Claim description: Product deficiencies reported in user feedback  
+Text: Manufacturer B's steel framing components have been reported by contractors to frequently bend under load, failing to meet the strength requirements as outlined in ASTM C645.
+
+Output:
+```
+(MANUFACTURER B{tuple_delimiter}ASTM C645{tuple_delimiter}PRODUCT DEFICIENCY{tuple_delimiter}SUSPECTED{tuple_delimiter}NONE{tuple_delimiter}NONE{tuple_delimiter}Manufacturer B's steel framing components have been reported to fail in meeting ASTM C645 strength requirements{tuple_delimiter}Manufacturer B's steel framing components have been reported by contractors to frequently bend under load, failing to meet the strength requirements as outlined in ASTM C645.)
+{completion_delimiter}
+```
+
+Real Data:
+
+Use the following input for your answer:  
+Entity specification: {entity_specs}  
+Claim description: {claim_description}  
+Text: {input_text}  
+
