@@ -1,0 +1,223 @@
+---- Page 1 ----
+Cost #
+Conformed Construction Set
+Received_03/10/23
+DEW CONSTRUCTION
+Charlotte Central School - Phase 2 Improvements / 19-0799
+Bid Set
+Job #
+10363
+SECTION 07 84 00
+FIRESTOPPING
+PART 1 GENERAL
+1.01
+SECTION INCLUDES
+A. Firestopping systems.
+B. Firestopping of all joints and penetrations in fire resistance rated and smoke resistant
+assemblies, whether indicated on Drawings or not, and other openings indicated.
+C. Details that require fire stopping include the following, but are not limited to:
+1. Penetrations through fire-resistance-rated floor and ceiling/roof construction requiring
+protected openings including both empty openings and openings that contain penetrations
+(including vertical shaft walls and partitions).
+2. Penetrations through fire-resistance-rated walls and partitions including both empty openings
+and openings that contain penetrations.
+3. Membrane penetrations if fire-resistance-rated walls and partitions that penetrating items
+penetrate one side of the barrier.
+4. Sealant joints in fire-resistance-rated construction (floors, walls or roof)
+5. Penetrations for the passage of duct, cable, cable tray, conduit, piping, electrical busways
+and raceways through fire-rated vertical barriers (walls and partitions), horizontal barriers
+(floor/ceiling assemblies), and vertical service shaft walls and partitions.
+6. Safing slot gaps between edge of floor slabs and curtain walls.
+7. Openings between structurally separate sections of wall or floors.
+8. Gaps between the top of walls and ceilings of roof assemblies.
+9. Openings and penetrations in walls containing fire doors.
+10. Openings around structural members penetrating floors or walls.
+1.02
+REFERENCE STANDARDS
+A. Editions of listed standards as referenced by applicable codes, or most current edition if not
+referenced:
+1. ASTM. ASTM International; www.astm.org.
+a. ASTM E119 - Standard Test Methods for Fire Tests of Building Construction and
+Materials.
+b. ASTM E814 - Standard Test Method for Fire Tests of Penetration Firestop Systems.
+c. ASTM E1966 - Standard Test Method for Fire-Resistive Joint Systems.
+2. UL. Underwriters Laboratories; www.ul.com.
+a. UL 2079 - Standard for Tests for Fire Resistance of Building Joint Systems.
+1.03
+ADMINISTRATIVE REQUIREMENTS
+A. Preinstallation Meetings: See Section 01 70 00 - Execution and Closeout Requirements.
+B. Sequencing and Scheduling per Section 01 32 16 - Construction Progress Schedule, and as
+follows:
+1. Coordinate construction of openings and penetrating items to ensure that through-
+penetration firestop systems are installed according to specified requirements. Coordinate
+sequence of work with the work of other trades.
+2. Coordinate sizing of sleeves, openings, core-drilled holes, or cut openings to accommodate
+through-penetration firestop systems.
+1.04
+SUBMITTALS
+A. See Section 01 30 00 - Administrative Requirements, for submittal procedures.
+B. Construction Submittals
+1. Product Data: Provide data on product characteristics.
+Firestopping
+07 84 00 - 1
+---- Page 2 ----
+Charlotte Central School - Phase 2 Improvements / 19-0799
+Bid Set
+2. Manufacturer's Installation Instructions: Indicate preparation and installation instructions.
+3. Manufacturer's Certificate: Certify that products meet or exceed specified requirements.
+4. Schedule of materials: Submit a schedule of materials indicating the firestop system to be
+utilized for each different firestopping application in tabular form and identify:
+a. Include all of the individual materials required for each complete system.
+b. Indicate manufacturer's product name and nomenclature for each material.
+c. Type of penetration or opening type by design designation of qualified testing and
+inspecting agency with location of each.
+d. Types of construction assembly penetrated, including fire-resistance ratings and, where
+applicable, thicknesses of construction penetrated.
+C. Closeout Submittals
+1. Submit in accordance with Section 01 70 00 - Execution and Closeout Requirements and
+Section 01 78 00 - Closeout Submittals.
+2. Operation and Maintenance Data:
+a. Basic Owner requirements to maintain warranty
+3. Warranty Documentation: Submit manufacturer's warranty and ensure that forms have been
+completed in Owner's name and registered with manufacturer.
+1.05
+QUALITY ASSURANCE
+A. Installer Qualifications: Company specializing in performing the work of this Section and:
+1. With minimum five years documented experience installing work of this type.
+2. Able to show at least five completed projects of comparable size and type.
+3. Having received and passed all training, licensing and approvals required by the firestopping
+system manufacturer.
+B. Single Source Responsibility: To the greatest extent practical, obtain firestop materials from
+single manufacturer.
+1. All trades required to provide firestopping and coordinate with each other to provide products
+from the same manufacturer.
+2. Materials of different firestop manufacturers shall not be intermixed in the same firestop
+system or opening - if not part of that firestop system.
+3. Tested and listed firestop systems are to be used before an engineering judgment (EJ) is
+requested, even if from another manufacturer.
+1.06
+FIELD CONDITIONS
+A. Comply with firestopping manufacturer's recommendations for temperature and conditions
+during and after installation; maintain minimum temperature before, during, and for three days
+after installation of materials.
+B. Provide ventilation in areas where solvent-cured materials are being installed.
+PART 2 PRODUCTS
+2.01
+MANUFACTURERS
+A. Firestopping Manufacturers:
+1. 3M Fire Protection Products: www.3m.com/firestop.
+2. Hilti, Inc: www.us.hilti.com.
+3. Pecora Corporation: www.pecora.com.
+4. RectorSeal: www.rectorseal.com.
+5. Specified Technologies Inc: www.stifirestop.com.
+6. Thermafiber, Inc: www.thermafiber.com.
+7. USG: www.usg.com.
+8. Other manufacturer's products accepted by the Awarding Authority as equal to the specified
+products in terms of construction, quality, durability, performance, and or appearance.
+Firestopping
+07 84 00 - 2
+---- Page 3 ----
+Charlotte Central School - Phase 2 Improvements / 19-0799
+Bid Set
+Submit as substitutions: see Section 01 25 00 - Substitution Procedures.
+2.02
+MATERIALS
+A. All materials shall be asbestos free and non-carcinogenic.
+B. If required, hazardous disposal of firestop materials shall be strictly observed as noted on the
+individual MSDS.
+C. Primers, Sleeves, Forms, Insulation, Packing, Stuffing, and Accessories: Provide type of
+materials required for tested firestopping assembly.
+2.03
+FIRESTOPPING ASSEMBLY REQUIREMENTS
+A. Performance Requirements - Provide and install firestopping systems that are produced to resist
+the spread of fire, according to requirements indicated, and the passage of smoke and other
+gases. Include the following:
+1. Firestop each penetration through rated construction to the approval of the Authority Having
+Jurisdiction (AHJ).
+2. Provide and install complete firestopping systems that are designed and approved for the
+specific construction to be firestopped.
+3. Provide and install firestop materials of thickness, width, and density required.
+B. F-Rated Through-Penetration Firestop Systems: Provide through-penetration firestop system
+with F (flame) ratings indicated, as determined per ASTM E814, but not less than that equaling
+or exceeding the fire-resistance rating of the constructions penetrated.
+C. T-Rated Through-Penetration Firestop Systems: Provide firestop systems with T (temperature)
+ratings, in addition to F ratings, as determined per ASTM E814, where indicated and where
+systems protect penetrating items exposed to contact with adjacent materials in occupied floor
+areas. T-rated assemblies are required where the following conditions exist where firestop
+systems protect:
+1. Penetrations located outside of wall cavities.
+2. Penetrations located outside fire-resistive shaft enclosures.
+3. Penetrations located in construction containing doors required to have a temperature-rise
+rating.
+4. Penetrating items larger than a 4 in. diameter nominal pipe of 16 sq. in. in overall cross-
+sectional area.
+D. Fire-Resistive Join Sealants: Provide joint sealants with fire-resistance ratings indicated, as
+determined per UL 2079 and/or ASTM E119 and ASTM E1966, but not less than that equaling or
+exceeding the fire-resistance rating of the construction in which the joint occurs.
+E. For firestopping exposed to view, traffic, moisture, and physical damage, provide products that
+do not deteriorate when exposed to these conditions.
+1. For piping penetrations for plumbing and wet-pipe sprinkler systems, provide through-
+penetration firestop systems with elastomeric qualities.
+2. For floor penetrations with annular spaces exceeding 4 in. or more in width and exposed to
+possible loading and traffic, provide firestop systems capable of supporting the floor loads
+involved either by installing floor plates or by other means.
+3. For penetrations involving insulated piping, provide through-penetration firestop systems not
+requiring removal of insulation.
+2.04
+FIRESTOPPING SYSTEMS
+A. Elastomeric Silicone Firestopping: Single component silicone elastomeric compound and
+compatible silicone sealant; conforming to the following:
+1. Durability and Longevity: Permanent.
+B. Foam Firestoppping: Single component silicone foam compound; conforming to the following:
+1. Durability and Longevity: Permanent.
+Firestopping
+07 84 00 - 3
+---- Page 4 ----
+Charlotte Central School - Phase 2 Improvements / 19-0799
+Bid Set
+C. Fibered Compound Firestopping: Formulated compound mixed with incombustible non-
+asbestos fibers; conforming to the following:
+1. Durability and Longevity: Permanent.
+D. Fiber Firestopping: Mineral fiber insulation used in conjunction with elastomeric surface sealer
+forming airtight bond to opening; conforming to the following:
+1. Durability and Longevity: Permanent.
+E. Firestop Devices - Wrap Type: Mechanical device with incombustible filler and sheet stainless
+steel jacket, intended to be installed after penetrating item has been installed; conforming to the
+following:
+1. Durability and Longevity: Permanent; suitable for pedestrian traffic.
+F. Intumescent Putty: Compound that expands on exposure to surface heat gain; conforming to
+the following:
+1. Durability and Longevity: Permanent.
+PART 3 EXECUTION
+3.01
+EXAMINATION
+A. Verify openings are ready to receive the work of this Section.
+3.02
+PREPARATION
+A. Clean substrate surfaces of dirt, dust, grease, oil, loose material, or other materials that could
+adversely affect bond of firestopping material.
+B. Remove incompatible materials that could adversely affect bond.
+C. Install backing materials to prevent liquid material from leakage.
+D. Coordinate with fire protection, plumbing, mechanical, electrical and other trades to assure that
+all pipe, conduit, cable, and other items that penetrate fire rated construction have been
+permanently installed prior to installation of firestops and smoke seals.
+3.03
+INSPECTION
+A. In accordance with requirements of the Authority Having Jurisdiction (AHJ), inspection of
+installed firestopping systems shall be provided by a third-party inspector on behalf of the Owner
+and the AHJ.
+B. In accordance with Section 01 40 00 - Quality Requirements and the General Requirements of
+Division 01, the subcontractor shall:
+1. Anticipate inspections, provide access to facilitate inspections, and cooperate fully with third-
+party inspector.
+2. Repair, modify, and replace installed firestopping materials determined by the inspector to
+be unacceptable, to the extent necessary to obtain inspector's approval of the installation.
+3.04
+CLEANING
+A. Clean adjacent surfaces of firestopping materials.
+PROTECTION
+3.05
+A. Protect adjacent surfaces from damage by material installation.
+END OF SECTION
+Firestopping
+07 84 00 - 4

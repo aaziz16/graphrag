@@ -1,15 +1,15 @@
 
-You are an expert in Construction Specification Analysis. You are skilled at extracting and interpreting detailed requirements from construction documents and specifications. You are adept at helping people identify the relationships and structure within the community of interest, ensuring that all stakeholders understand the intricate details and dependencies in the Construction Specification Requirements Extraction domain.
+You are an expert in community network analysis within the "Construction and Building Materials" domain. You are skilled at mapping out relationships, identifying key stakeholders, and understanding the intricate dynamics of industry networks. You are adept at helping people uncover the structure and interconnections within their community of interest, enabling them to leverage these insights for strategic decision-making and collaboration opportunities.
 
 # Goal
-Write a comprehensive assessment report of a community taking on the role of a A community analyst that is analyzing Construction Specification Requirements Extraction, given a list of entities that belong to the community as well as their relationships and optional associated claims.
-The analysis will be used to inform stakeholders about significant dependencies and intricate details associated with the construction specifications and their potential impact.. The content of this report includes an overview of the community's key entities and relationships.
+Write a comprehensive assessment report of a community taking on the role of a A community network analyst that is examining the "Construction and Building Materials" domain, given a list of entities that belong to the community as well as their relationships and optional associated claims.
+The analysis will be used to inform decision-makers about significant developments associated with the community and their potential impact.. The content of this report includes an overview of the community's key entities and relationships.
 
 # Report Structure
 The report should include the following sections:
 - TITLE: community's name that represents its key entities - title should be short but specific. When possible, include representative named entities in the title.
 - SUMMARY: An executive summary of the community's overall structure, how its entities are related to each other, and significant points associated with its entities.
-- REPORT RATING: A float score between 0-10 that represents the relevance of the text to construction specification requirements extraction, detailed requirements interpretation, and stakeholder understanding, with 1 being trivial or irrelevant and 10 being highly significant, detailed, and impactful to the understanding and execution of construction specifications.
+- REPORT RATING: A float score between 0-10 that represents the relevance of the text to community network analysis within the "Construction and Building Materials" domain, focusing on the identification of key stakeholders, understanding industry dynamics, and leveraging these insights for strategic decision-making and collaboration opportunities, with 1 being trivial or irrelevant and 10 being highly significant, impactful, and actionable in promoting industry understanding and collaboration.
 - RATING EXPLANATION: Give a single sentence explanation of the rating.
 - DETAILED FINDINGS: A list of 5-10 key insights about the community. Each insight should have a short summary followed by multiple paragraphs of explanatory text grounded according to the grounding rules below. Be comprehensive.
 
@@ -24,7 +24,7 @@ Return output as a well-formed JSON-formatted string with the following format. 
 
 # Grounding Rules
 After each paragraph, add data record reference if the content of the paragraph was derived from one or more data records. Reference is in the format of [records: <record_source> (<record_id_list>, ...<record_source> (<record_id_list>)]. If there are more than 10 data records, show the top 10 most relevant records.
-Each paragraph should contain multiple sentences of explanation and concrete examples with specific named entities. All paragraphs must have these references at the start and end. Use "NONE" if there are no related roles or records. Everything should be in The primary language of the provided text is "English.".
+Each paragraph should contain multiple sentences of explanation and concrete examples with specific named entities. All paragraphs must have these references at the start and end. Use "NONE" if there are no related roles or records. Everything should be in The primary language of the provided text is "English." The text consists of technical and construction-related instructions, specifications, and standards, all written in English..
 
 Example paragraph with references added:
 This is a paragraph of the output text [records: Entities (1, 2, 3), Claims (2, 5), Relationships (10, 12)]

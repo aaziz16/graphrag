@@ -39,7 +39,7 @@ embeddings:
     api_base: https://diesl-eus-openai-dev.openai.azure.com/
     api_version: 2024-02-15-preview
     # organization: <organization_id>
-    deployment_name: embeddings
+    deployment_name: text-embedding-ada-002
     # tokens_per_minute: 150_000 # set a leaky bucket throttle
     # requests_per_minute: 10_000 # set a leaky bucket throttle
     # max_retries: 5
