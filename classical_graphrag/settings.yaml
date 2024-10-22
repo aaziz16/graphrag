@@ -4,7 +4,7 @@ skip_workflows: []
 llm:
   api_key: ${OPENAI_API_KEY}
   type: azure_openai_chat # or azure_openai_chat
-  model: gpt-4o
+  model: gpt-4o-alpha
   model_supports_json: true # recommended if this is available for your model.
   # max_tokens: 4000
   # request_timeout: 180.0
@@ -53,7 +53,7 @@ embeddings:
 
 chunks:
   size: 700
-  overlap: 300
+  overlap: 350s
   group_by_columns: [id] # by default, we don't allow chunks to cross documents
     
 input:
